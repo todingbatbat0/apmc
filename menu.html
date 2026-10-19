@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Menu | Toding's Empanada</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8e8;
+            color: #351208;
+        }
+
+        header {
+            background: #7b250d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background: #fb8500;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 12px;
+            gap: 8px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 14px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: #7b250d;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro h2 {
+            color: #7b250d;
+            font-size: clamp(26px, 4vw, 36px);
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .food-gallery {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(220px, 1fr)
+            );
+            gap: 22px;
+        }
+
+        .food-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .food-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .food-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .food-info {
+            padding: 15px;
+        }
+
+        .food-info h3 {
+            color: #7b250d;
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        .food-info p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            min-height: 42px;
+        }
+
+        .price {
+            color: #fb8500;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .order-btn {
+            display: inline-block;
+            background: #7b250d;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .order-btn:hover {
+            background: #fb8500;
+        }
+
+        .notice {
+            text-align: center;
+            background: #ffedc2;
+            padding: 18px;
+            margin-top: 30px;
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #351208;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                gap: 4px;
+            }
+
+            nav a {
+                padding: 9px;
+                font-size: 13px;
+            }
+
+            .container {
+                width: 94%;
+                margin: 22px auto;
+            }
+
+            .food-gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .food-card img {
+                height: 135px;
+            }
+
+            .food-info {
+                padding: 10px 6px;
+            }
+
+            .food-info h3 {
+                font-size: 16px;
+            }
+
+            .food-info p {
+                font-size: 12px;
+                min-height: 50px;
+            }
+
+            .price {
+                font-size: 19px;
+            }
+
+            .order-btn {
+                padding: 9px 12px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 340px) {
+            .food-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .food-card img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>&#129375 Toding's Empanada</h1>
+        <p>Crispy. Delicious. Made With Love.</p>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html" >Menu</a>
+        <a href="order.html">Order</a>
+        <a href="contact.html">Contact</a>
+       
+    </nav>
+
+    <main class="container">
+
+        <section class="intro">
+            <h2>Our Delicious Empanada Menu</h2>
+            <p>
+                Choose your favorite flavor and enjoy our delicious
+                empanadas, perfect for every snack time!
+            </p>
+        </section>
+
+        <section class="food-gallery">
+
+            <article class="food-card">
+                <img src="chicken.jpg"
+                     alt="Classic Chicken Empanada">
+                <div class="food-info">
+                    <h3>Classic Chicken</h3>
+                    <p>Chicken filling with special seasoning.</p>
+                    <div class="price">	 20</div>
+                    <a class="order-btn" href="place_orders.html">Order Now</a>
+                </div>
+            </article>
+
+            <article class="food-card">
+                <img src="beef.jpg"
+                     alt="Beef Special Empanada">
+                <div class="food-info">
+                    <h3>Beef Special</h3>
+                    <p>Delicious beef filling with vegetables.</p>
+                    <div class="price"> 25</div>
+                    <a class="order-btn" href="place_order.html">Order Now</a>
+                </div>
+            </article>
+
+            <article class="food-card">
+                <img src="cheesy-chicken.jpg"
+                     alt="Cheesy Chicken Empanada">
+                <div class="food-info">
+                    <h3>Cheesy Chicken</h3>
+                    <p>Tasty chicken with cheesy goodness.</p>
+                    <div class="price"> 25</div>
+                    <a class="order-btn" href="place_order.html">Order Now</a>
+                </div>
+            </article>
+
+            <article class="food-card">
+                <img src="ham-cheese.jpg"
+                     alt="Ham and Cheese Empanada">
+                <div class="food-info">
+                    <h3>Ham &amp; Cheese</h3>
+                    <p>Ham combined with creamy cheese.</p>
+                    <div class="price"> 25</div>
+                    <a class="order-btn" href="place_order.html">Order Now</a>
+                </div>
+            </article>
+
+            <article class="food-card">
+                <img src="pizza.jpg"
+                     alt="Pizza Empanada">
+                <div class="food-info">
+                    <h3>Pizza Empanada</h3>
+                    <p>A delicious pizza-inspired filling.</p>
+                    <div class="price"> 25</div>
+                    <a class="order-btn" href="place_order.html">Order Now</a>
+                </div>
+            </article>
+
+            <article class="food-card">
+                <img src="spicy-beef.jpg"
+                     alt="Spicy Beef Empanada">
+                <div class="food-info">
+                    <h3>Spicy Beef</h3>
+                    <p>Flavorful beef with a spicy kick.</p>
+                    <div class="price"> 25</div>
+                    <a class="order-btn" href="place_order.html">Order Now</a>
+                </div>
+            </article>
+
+            <article class="food-card">
+                <img src="tuna.jpg"
+                     alt="Tuna Special Empanada">
+                <div class="food-info">
+                    <h3>Tuna Special</h3>
+                    <p>Savory tuna wrapped in crispy pastry.</p>
+                    <div class="price"> 25</div>
+                    <a class="order-btn" href="place_order.html">Order Now</a>
+                </div>
+            </article>
+
+            <article class="food-card">
+                <img src="corn-cheese.jpg"
+                     alt="Cheese Corn Empanada">
+                <div class="food-info">
+                    <h3>Cheese Corn</h3>
+                    <p>Sweet corn with delicious cheese.</p>
+                    <div class="price"> 20</div>
+                    <a class="order-btn" href="place_order.html">Order Now</a>
+                </div>
+            </article>
+
+            <article class="food-card">
+                <img src="bbq-chicken.jpg"
+                     alt="BBQ Chicken Empanada">
+                <div class="food-info">
+                    <h3>BBQ Chicken</h3>
+                    <p>Chicken filling with a sweet BBQ flavor.</p>
+                    <div class="price"> 25</div>
+                    <a class="order-btn" href="place_order.html">Order Now</a>
+                </div>
+            </article>
+
+            <article class="food-card">
+                <img src="chocolate-banana.jpg"
+                     alt="Chocolate Banana Empanada">
+                <div class="food-info">
+                    <h3>Chocolate Banana</h3>
+                    <p>Sweet banana with chocolate filling.</p>
+                    <div class="price"> 20</div>
+                    <a class="order-btn" href="place_order.html">Order Now</a>
+                </div>
+            </article>
+
+        </section>
+
+        <div class="notice">
+            <strong> &#129375 Freshly Made for You!</strong>
+            <p>
+                Choose your favorite flavor and click
+                "Order Now" to see our ordering page.
+            </p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Toding's Empanada. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+```

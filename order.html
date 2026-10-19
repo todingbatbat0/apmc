@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Order | Toding's Empanada</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8e8;
+            color: #351208;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #7b250d;
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: clamp(22px, 4vw, 36px);
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 12px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: #fb8500;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        .intro h2 {
+            color: #a33a13;
+            font-size: clamp(25px, 4vw, 34px);
+        }
+
+        .steps {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 12px #00000012;
+        }
+
+        .number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 55px;
+            height: 55px;
+            background: #fb8500;
+            border-radius: 50%;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .step h3 {
+            color: #7b250d;
+            margin-bottom: 5px;
+        }
+
+        .btn {
+            display: block;
+            width: fit-content;
+            max-width: 100%;
+            margin: 20px auto 35px;
+            padding: 14px 25px;
+            background: #7b250d;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #fb8500;
+        }
+
+        footer {
+            background: #351208;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                padding: 8px;
+                font-size: 13px;
+            }
+
+            .steps {
+                padding: 15px;
+            }
+
+            .step {
+                align-items: flex-start;
+                gap: 12px;
+                padding: 15px;
+            }
+
+            .number {
+                min-width: 42px;
+                height: 42px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>	&#129375 TODING'S EMPANADA</h1>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+            
+        </nav>
+    </header>
+
+    <section class="intro">
+        <h2>How to Order</h2>
+        <p>Getting your favorite empanada is easy!</p>
+    </section>
+
+    <main class="steps">
+        <div class="step">
+            <div class="number">1</div>
+            <div>
+                <h3>Choose Your Flavor</h3>
+                <p>Visit our menu and select your favorite flavors.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="number">2</div>
+            <div>
+                <h3>Place Your Order</h3>
+                <p>Visit our food cart or contact us using our contact details.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="number">3</div>
+            <div>
+                <h3>Confirm Your Order</h3>
+                <p>Check your flavors, quantities, and total price.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="number">4</div>
+            <div>
+                <h3>Enjoy Your Empanada!</h3>
+                <p>Receive your order and enjoy your delicious snack.</p>
+            </div>
+        </div>
+
+        <a href="place_order.html" class="btn">order</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Toding's Empanada. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+```

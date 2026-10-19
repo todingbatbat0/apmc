@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Your Order | Toding's Empanada</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8e8;
+            color: #351208;
+        }
+
+        header {
+            background: #7b250d;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+        }
+
+        nav {
+            background: #fb8500;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 13px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: #7b250d;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .heading h2 {
+            color: #7b250d;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .order-form {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #7b250d;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 2px solid #fb8500;
+        }
+
+        .flavor-heading {
+            color: #7b250d;
+            margin: 5px 0 15px;
+        }
+
+        .flavors {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .flavor-card {
+            border: 1px solid #eee0ca;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fffaf0;
+        }
+
+        .flavor-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .flavor-card div {
+            padding: 12px;
+        }
+
+        .flavor-card h3 {
+            color: #7b250d;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .flavor-card p {
+            color: #fb8500;
+            font-weight: bold;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 7px;
+            background: #7b250d;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #fb8500;
+        }
+
+        .note {
+            background: #fff0c9;
+            padding: 15px;
+            border-radius: 8px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #351208;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 480px) {
+            .flavors {
+                grid-template-columns: 1fr;
+            }
+
+            .flavor-card img {
+                height: 190px;
+            }
+
+            .order-form {
+                padding: 18px;
+            }
+
+            .heading h2 {
+                font-size: 25px;
+            }
+
+            nav a {
+                font-size: 13px;
+                padding: 9px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>&#129375 Toding's Empanada</h1>
+        <p>Crispy. Delicious. Made With Love.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html" class="active">Order</a>
+        <a href="contact.html">Contact</a>
+       
+    </nav>
+
+    <main class="container">
+
+        <div class="heading">
+            <h2>Place Your Order 	&#128204</h2>
+            <p>Choose your favorite empanada and fill out the form.</p>
+        </div>
+
+        <form class="order-form"
+              action="mailto:your-email@example.com"
+              method="post"
+              enctype="text/plain">
+
+            <div class="note">
+                <strong>How to order:</strong><br>
+                1. Enter your name and contact details.<br>
+                2. Choose your empanada flavor.<br>
+                3. Enter the quantity you want.<br>
+                4. Submit your order request.
+            </div>
+
+            <h3 class="flavor-heading">Our Empanada Flavors</h3>
+
+            <div class="flavors">
+
+                <div class="flavor-card">
+                    <img src="chicken.jpg"
+                         alt="Classic Chicken Empanada">
+                    <div>
+                        <h3>Classic Chicken</h3>
+                        <p>20 each</p>
+                    </div>
+                </div>
+
+                <div class="flavor-card">
+                    <img src="beef.jpg"
+                         alt="Beef Special Empanada">
+                    <div>
+                        <h3>Beef Special</h3>
+                        <p>25 each</p>
+                    </div>
+                </div>
+
+                <div class="flavor-card">
+                    <img src="cheesy-chicken.jpg"
+                         alt="Cheesy Chicken Empanada">
+                    <div>
+                        <h3>Cheesy Chicken</h3>
+                        <p>25 each</p>
+                    </div>
+                </div>
+
+                <div class="flavor-card">
+                    <img src="ham-cheese.jpg"
+                         alt="Ham and Cheese Empanada">
+                    <div>
+                        <h3>Ham &amp; Cheese</h3>
+                        <p>25 each</p>
+                    </div>
+                </div>
+
+                <div class="flavor-card">
+                    <img src="pizza.jpg"
+                         alt="Pizza Empanada">
+                    <div>
+                        <h3>Pizza Empanada</h3>
+                        <p>25 each</p>
+                    </div>
+                </div>
+
+                <div class="flavor-card">
+                    <img src="spicy-beef.jpg"
+                         alt="Spicy Beef Empanada">
+                    <div>
+                        <h3>Spicy Beef</h3>
+                        <p>25 each</p>
+                    </div>
+                </div>
+
+                <div class="flavor-card">
+                    <img src="tuna.jpg"
+                         alt="Tuna Special Empanada">
+                    <div>
+                        <h3>Tuna Special</h3>
+                        <p>25 each</p>
+                    </div>
+                </div>
+
+                <div class="flavor-card">
+                    <img src="corn-cheese.jpg"
+                         alt="Cheese Corn Empanada">
+                    <div>
+                        <h3>Cheese Corn</h3>
+                        <p>20 each</p>
+                    </div>
+                </div>
+
+                <div class="flavor-card">
+                    <img src="bbq-chicken.jpg"
+                         alt="BBQ Chicken Empanada">
+                    <div>
+                        <h3>BBQ Chicken</h3>
+                        <p>25 each</p>
+                    </div>
+                </div>
+
+                <div class="flavor-card">
+                    <img src="chocolate-banana.jpg"
+                         alt="Chocolate Banana Empanada">
+                    <div>
+                        <h3>Chocolate Banana</h3>
+                        <p>20 each</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <label for="customer">Customer Name</label>
+            <input type="text" id="customer" name="Customer Name"
+                   placeholder="Enter your full name" required>
+
+            <label for="phone">Contact Number</label>
+            <input type="tel" id="phone" name="Contact Number"
+                   placeholder="Enter your contact number" required>
+
+            <label for="flavor">Choose Flavor</label>
+            <select id="flavor" name="Flavor" required>
+                <option value="">-- Select Empanada Flavor --</option>
+                <option>Classic Chicken - 20</option>
+                <option>Beef Special - 25</option>
+                <option>Cheesy Chicken - 25</option>
+                <option>Ham & Cheese - 25</option>
+                <option>Pizza Empanada - 25</option>
+                <option>Spicy Beef - 25</option>
+                <option>Tuna Special - 25</option>
+                <option>Cheese Corn - 20</option>
+                <option>BBQ Chicken - 25</option>
+                <option>Chocolate Banana - 20</option>
+            </select>
+
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="Quantity"
+                   min="1" max="100" value="1" required>
+
+            <label for="delivery">Pickup or Delivery</label>
+            <select id="delivery" name="Order Method" required>
+                <option value="">-- Select Order Method --</option>
+                <option>Pickup</option>
+                <option>Delivery</option>
+            </select>
+
+            <label for="address">Delivery Address (if needed)</label>
+            <textarea id="address" name="Delivery Address"
+                      rows="3"
+                      placeholder="Enter delivery address if applicable"></textarea>
+
+            <label for="notes">Additional Instructions</label>
+            <textarea id="notes" name="Additional Instructions"
+                      rows="3"
+                      placeholder="Any special requests?"></textarea>
+
+            <button type="submit" class="submit-btn">
+                Submit Order Request
+            </button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Toding's Empanada. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+```

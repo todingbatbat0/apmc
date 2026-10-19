@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Toding's Empanada</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffb703, #fb8500);
+            color: #351208;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #7b250d;
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: clamp(22px, 4vw, 36px);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 35px 15px;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+            background: #fff8e8;
+            padding: 35px 28px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px #35120830;
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 65px;
+        }
+
+        h2 {
+            color: #7b250d;
+            text-align: center;
+            margin: 10px 0;
+            font-size: clamp(24px, 4vw, 30px);
+        }
+
+        .subtitle {
+            color: #66554b;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 15px 0 7px;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            min-width: 0;
+            padding: 13px;
+            border: 1px solid #d9b99b;
+            border-radius: 7px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: 2px solid #fb8500;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 22px;
+            background: #7b250d;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background: #a33a13;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 20px;
+            line-height: 2;
+        }
+
+        .links a {
+            color: #7b250d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        #message {
+            color: #c62828;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        footer {
+            background: #351208;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        @media (max-width: 600px) {
+            .login-box {
+                padding: 25px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>&#129375 TODING'S EMPANADA</h1>
+    </header>
+
+    <main>
+        <section class="login-box">
+
+            <div class="logo">&#129375 </div>
+
+            <h2>Welcome Back!</h2>
+            <p class="subtitle">Login to Toding's Empanada</p>
+
+            <form onsubmit="return checkLogin()">
+
+                <label for="username">Username or Email</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter your username"
+                    autocomplete="username"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="submit" class="login-button">
+                    LOGIN
+                </button>
+
+                <p id="message" role="alert"></p>
+
+            </form>
+
+            <div class="links">
+                <a href="contact.html">Forgot Password?</a>
+
+                <p>Don't have an account?</p>
+
+                <a href="home.html">Continue as Guest</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Toding's Empanada. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function checkLogin() {
+            const username =
+                document.getElementById("username").value.trim();
+
+            const password =
+                document.getElementById("password").value;
+
+            const message =
+                document.getElementById("message");
+
+            if (username === "toding" && password === "12345") {
+                window.location.href = "home.html";
+            } else {
+                message.textContent =
+                    "Wrong username or password! Please try again.";
+            }
+
+            return false;
+        }
+    </script>
+
+</body>
+</html>
+```
